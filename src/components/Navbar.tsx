@@ -1,8 +1,8 @@
 
-import {  Moon, Sun } from 'lucide-react';
+
 import { Link } from 'react-scroll';
 
-export default function Navbar({ theme, toggleTheme }: { theme: string, toggleTheme: () => void }) {
+export default function Navbar() {
   return (
     <nav className="fixed w-full z-50 bg-[#0d1117]/90 backdrop-blur-md border-b border-gh-border">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
@@ -26,9 +26,7 @@ export default function Navbar({ theme, toggleTheme }: { theme: string, toggleTh
                {item}
              </Link>
           ))}
-          <button onClick={toggleTheme} className="text-gh-muted hover:text-white">
-            {theme === 'dark' ? <Sun size={18}/> : <Moon size={18}/>}
-          </button>
+       
         </div>
       </div>
     </nav>

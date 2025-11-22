@@ -3,21 +3,21 @@ import Certifications from "./components/Certifications";
 import Education from "./components/Education";
 import GitHubExperience from "./components/GithubExperience";
 import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
+
 import PinnedRepos from "./components/PinnedRepos";
 import  { USER_DATA } from "./constants/user-data";
+import Navbar from "./components/Navbar";
 
 
 
 function App() {
-  const theme = 'dark';
-  const toggleTheme = () => {}; 
+
 
   return (
     <div className="min-h-screen font-sans bg-gh-bg text-gh-text selection:bg-gh-blue/30">
       
       <div className="relative z-10">
-        <Navbar theme={theme} toggleTheme={toggleTheme} />
+        <Navbar  />
         
         <main>
           <Hero />
