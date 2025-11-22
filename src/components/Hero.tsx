@@ -53,11 +53,11 @@ export default function Hero() {
             <div className="flex items-center gap-3">
               <Linkedin size={16} className="text-gh-muted" /> <a href={USER_DATA.social.linkedin} target="_blank" className="hover:text-gh-blue">linkedin.com/in/bezawit</a>
             </div>
-            <div className="flex items-center gap-3">
-              <Mail size={16} className="text-gh-muted" /> <span className="truncate">{USER_DATA.social.email}</span>
+          <div className="flex items-center gap-3">
+              <Mail size={16} className="text-gh-muted" /> <a href={`mailto:${USER_DATA.social.email}`} target="_blank" className="hover:text-gh-blue">{USER_DATA.social.email}</a>
             </div>
-             <div className="flex items-center gap-3">
-              <Phone size={16} className="text-gh-muted" /> <span className="truncate">{USER_DATA.social.phone}</span>
+            <div className="flex items-center gap-3">
+              <Phone size={16} className="text-gh-muted" /> <a href={`tel:${USER_DATA.social.phone.replace(/\s/g, "")}`} target="_blank" className="hover:text-gh-blue">{USER_DATA.social.phone}</a>
             </div>
           </div>
         </motion.div>
