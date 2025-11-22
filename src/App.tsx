@@ -3,7 +3,7 @@ import Certifications from "./components/Certifications";
 import Education from "./components/Education";
 import GitHubExperience from "./components/GithubExperience";
 import Hero from "./components/Hero";
-import Navbar from "./components/NavBar";
+import Navbar from "./components/Navbar";
 import PinnedRepos from "./components/PinnedRepos";
 import  { USER_DATA } from "./constants/user-data";
 
