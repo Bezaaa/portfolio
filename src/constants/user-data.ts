@@ -48,7 +48,7 @@ skills: [
     {
       company: "A2SV",
       role: "Frontend Developer",
-      date: "2025 - Present",
+      date: "Present",
       logo: Code,
       bullets: [
         "Constructed high-performance web applications with Next.js, leveraging SSR and SSG to boost SEO by 30%.",
