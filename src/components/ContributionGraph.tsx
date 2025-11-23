@@ -2,7 +2,7 @@
 
 export default function ContributionGraph() {
 
-  const weeks = 53;
+  const weeks = 80;
   const days = 7;
   
   return (
