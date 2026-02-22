@@ -5,6 +5,7 @@ import GitHubExperience from "./components/GithubExperience";
 import Hero from "./components/Hero";
 
 import PinnedRepos from "./components/PinnedRepos";
+import PersonalProjects from "./components/PersonalProjects";
 import  { USER_DATA } from "./constants/user-data";
 import Navbar from "./components/Navbar";
 
@@ -22,6 +23,7 @@ function App() {
         <main>
           <Hero />
           <PinnedRepos />
+          <PersonalProjects />
           <GitHubExperience />
           
        

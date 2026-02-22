@@ -115,36 +115,88 @@ skills: [
     }
   ],
 
-  projects: [
-    {
+personalProjects: [
+  {
+    title: "Hall of Zero Limits",
+    shortDesc: "Cinematic, interactive frontend experience inspired by high-production promotional sites like Wakanda Forever.",
+    desc: "Recreated a sense of depth, spatial navigation, and atmosphere without WebGL or Three.js — a pure CSS + Framer Motion challenge built to prove that cinematic experiences don't require a 3D engine.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    liveUrl: "https://wakanda-site-jogc8ll54-bezateshome1234gmailcoms-projects.vercel.app/",
+    repoUrl: "https://github.com/Bezaaa/Parallax_App",
+  },
+  {
+    title: "FraudLens — AI Fraud Detection",
+    shortDesc: "Real-time fraud detection dashboard powered by ML-based risk scoring and SHAP explainability.",
+    desc: "Built with Next.js and a custom TypeScript ML scoring engine. Analyses 9 transaction features (device, account age, purchase value, geolocation signals) to produce a 0–100% fraud probability with per-feature SHAP impact charts.",
+    tech: ["Next.js", "TypeScript", "Recharts", "Framer Motion", "Tailwind CSS"],
+    liveUrl: "https://fraudlens-bezaaa.vercel.app",
+    repoUrl: "https://github.com/Bezaaa/fraud-dashboard",
+  },
+  {
+    title: "HelpDesk Operations Hub",
+    shortDesc: "Full-stack support ticket management system with role-based access control.",
+    desc: "A professional ticketing platform with distinct Admin and User dashboards, full CRUD on support tickets, real-time URL-based filtering, password hashing with Bcrypt, and an in-app notification system for account verification.",
+    tech: ["Next.js", "TypeScript", "Prisma", "Auth.js", "PostgreSQL", "Tailwind CSS", "ShadCN UI"],
+    liveUrl: "https://help-desk-snowy.vercel.app/dashboard",
+    repoUrl: "https://github.com/Bezaaa/help-desk",
+  },
+],
+
+projects: [
+   {
       title: "Scalable Telegram Bot Platform",
-      desc: "An interactive bot architecture serving 100k+ users with game modules (Keno, Spin & Win,Bingo). Features a modular codebase with 90% test coverage using NestJS.",
-      tech: ["NestJS", "Node.js", "Telegraf", "TypeScript"],
-      language: "TypeScript"
-    },
-    {
-      title: "High-Performance Web Suite",
-      desc: "Optimized web applications focusing on Core Web Vitals. Implemented code splitting, image optimization, and lazy loading strategies to reduce load times by 20%.",
-      tech: ["Next.js", "React", "Redux", "Tailwind"],
-      language: "TypeScript"
-    },
-    {
-      title: "Science Museum Interactive Platform",
-      desc: "Designed and built a gamified educational platform currently displayed at the National Science Museum. Engages thousands of daily visitors with interactive scientific simulations and real-time quizzes.",
-      tech: ["React", "TypeScript", "Framer Motion", "Node.js"], 
-      language: "TypeScript"
+      shortDesc: "Interactive bot serving 100k+ users with real-time game modules.",
+      tech: ["NestJS", "Node.js", "Apache Kafka", "TypeScript"], 
+      isCaseStudy: true,
+      details: {
+        problem: "During live gaming events (Keno/Bingo), thousands of users placed bets simultaneously. The server struggled to process these synchronously, leading to lag and lost transactions.",
+        solution: "I integrated **Apache Kafka** to decouple the betting traffic. I implemented the 'Producer' logic to push user commands into topics immediately, and built a separate 'Consumer' service to process game logic asynchronously in the background.",
+        outcome: "Ensured zero data loss for user bets (even during crashes) due to Kafka's durability. The system comfortably handled 100k+ users with smooth response times."
+      }
     },
     {
       title: "Fintech Analytics Dashboard",
-      desc: "Developed a high-performance frontend for a financial technology platform. Features real-time data visualization, secure transaction flows, and complex state management for financial reporting.",
-      tech: ["Next.js", "Tailwind CSS", "Redux", "Chart.js"],
-      language: "TypeScript"
+      shortDesc: "Frontend dashboard for visualizing large financial datasets.",
+      tech: ["Next.js", "Redux Toolkit", "Recharts", "Tailwind"],
+      isCaseStudy: true,
+      details: {
+        problem: "The dashboard became unresponsive when loading large transaction histories (5,000+ rows), causing a poor experience for the finance team.",
+        solution: "I implemented 'Virtualization' (using react-window) to only render rows currently in view. I also optimized the Redux state to prevent unnecessary re-renders when updating a single transaction status.",
+        outcome: "Reduced initial page load time by 40%. The table now scrolls smoothly at 60fps even with thousands of records."
+      }
     },
     {
-      title: "Zhewu E-Commerce Architecture",
-      desc: "Architected a scalable e-commerce system and a core UI component library. Reduced post-release bugs by 40% through rigorous testing protocols and standardized component usage.",
-      tech: ["JavaScript", "HTML/CSS", "Jest", "CI/CD"],
-      language: "JavaScript"
-    }
+      title: "Science Museum Interactive UI",
+      shortDesc: "Gamified educational platform integrated with hardware sensors.",
+      tech: ["React", "WebSockets", "Framer Motion", "TypeScript"],
+      isCaseStudy: true,
+      details: {
+        problem: "The display needed to show real-time sensor data from the museum exhibits, but the connection would occasionally drop, freezing the UI.",
+        solution: "I built a robust WebSocket integration that handles reconnection gracefully. I added a local 'store' to cache the last known data, so the screen never went blank even if the sensor connection flickered.",
+        outcome: "Deployed to the National Science Museum. The system runs 24/7 with a self-healing connection mechanism."
+      }
+    },
+    {
+      title: "E-Commerce Component System",
+      shortDesc: "Shared UI library for a multi-tenant e-commerce platform.",
+      tech: ["React", "Storybook", "NPM", "CI/CD"],
+      isCaseStudy: true,
+      details: {
+        problem: "We had multiple e-commerce sites (web and mobile web) that looked inconsistent. Developers were copy-pasting button styles and form logic, leading to bugs.",
+        solution: "I extracted common UI elements into a centralized Component Library using React and Storybook. I enforced strict TypeScript interfaces to ensure other developers used the components correctly.",
+        outcome: "Reduced UI bugs by 30%. New features can now be rolled out to all platforms simply by updating the shared library version."
+      }
+    },
+    {
+      title: "RateEat - AI Menu Platform",
+      shortDesc: "SaaS platform helping restaurants digitize menus using Generative AI.",
+      tech: ["Next.js", "Redux Toolkit", "AI Integration", "Tailwind"],
+      isCaseStudy: true,
+      details: {
+        problem: "The onboarding process involved complex state (hundreds of menu items) and slow AI image generation. Waiting for the server to generate images blocked the UI, causing users to drop off.",
+        solution: "I architected a global state management system using **Redux Toolkit** to handle the multi-step onboarding. I implemented an **Optimistic UI** pattern for the AI generation, allowing users to continue editing menu details while images processed asynchronously in the background.",
+        outcome: "Improved perceived performance significantly. Users can now digitize full menus with zero UI blocking, leading to higher completion rates."
+      }
+    },
   ]
 };
