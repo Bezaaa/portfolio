@@ -137,7 +137,7 @@ personalProjects: [
     shortDesc: "Full-stack support ticket management system with role-based access control.",
     desc: "A professional ticketing platform with distinct Admin and User dashboards, full CRUD on support tickets, real-time URL-based filtering, password hashing with Bcrypt, and an in-app notification system for account verification.",
     tech: ["Next.js", "TypeScript", "Prisma", "Auth.js", "PostgreSQL", "Tailwind CSS", "ShadCN UI"],
-    liveUrl: "https://help-desk-snowy.vercel.app/dashboard",
+    liveUrl: "https://help-desk-snowy.vercel.app",
     repoUrl: "https://github.com/Bezaaa/help-desk",
   },
 ],
